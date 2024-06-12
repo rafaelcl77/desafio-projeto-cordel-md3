@@ -28,7 +28,9 @@ header {
 
 header h1 {
     font-family: var(--main-title);
+    font-variant: small-caps;
     color: white;
+    font-size: 4em;
 }
 header h1:hover {
     text-decoration: underline;
@@ -39,6 +41,7 @@ header p > a {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    padding-left: 3px;
 }
 header p > a:hover {
     text-decoration: underline;
@@ -47,51 +50,42 @@ header p > a:hover {
 
 main p {
     font-family: var(--poema);
-    font-size: 51px;
-    margin-left: 35px;
+    font-size: 3vw; /* deixei a fonte do p responsiva */
+    line-height: 2em;
 }
 main div {
-    padding: 30px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 35px;
 }
 
 .imagem-1 {
-    height: 1000px;
+    max-height: 1000px;
     width: 100%;
 
     background-image: url('imagens/background001.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    position: relative;
+    box-shadow: inset 6px 6px 13px 0 rgba(0, 0, 0, 0.5);
 }
 
 .imagem-2 {
-    height: 1000px;
+    max-height: 1000px;
     width: 100%;
 
     background-image: url('imagens/background002.jpg');
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
+    box-shadow: inset 6px 6px 13px 0 rgba(0, 0, 0, 0.5);
 }
 
-.inside {
+.imagem-1 > p, .imagem-2 > p {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    height: auto;
-    width: auto;
-
-    position: absolute;
-
-    top: 50%;
-    left: 30px;
-
-    transform: translate(0, -50%);
+    max-width: 38vw;
+    padding-left: 10px;
 }
-.inside p {
-    margin-left: 5px;
-}
-
 
 footer {
     background-color: black;
@@ -107,4 +101,8 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
+}
+
+header, footer {
+    font-size: 2vh;
 }
